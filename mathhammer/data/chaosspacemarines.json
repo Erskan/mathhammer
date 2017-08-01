@@ -1,0 +1,36 @@
+{
+    "name": "Chaos Space Marines",
+    "hq": [
+
+    ],
+    "elite": [
+
+    ],
+    "troop": [
+        {
+            "name": "Chaos Space Marine",
+            "points": 25,
+            "move": 6,
+            "ws": 3,
+            "bs": 3,
+            "attacks": 1,
+            "strength": 4,
+            "toughness": 4,
+            "wounds": 1,
+            "maxmodels": 20,
+            "minmodels": 5,
+            "numofmodels": 5,
+            "rules": [
+            ]
+        }
+    ],
+    "fast": [
+
+    ],
+    "heavy": [
+
+    ],
+    "flyer": [
+
+    ]
+}

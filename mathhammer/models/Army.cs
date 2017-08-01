@@ -7,6 +7,7 @@ namespace mathhammer.models
 {
   public class Army
   {
+    private string _name;
     private List<HQ> _hq;
     private List<Elite> _elite;
     private List<Troop> _troop;
@@ -14,8 +15,15 @@ namespace mathhammer.models
     private List<Heavy> _heavy;
     private List<Flyer> _flyer;
 
-    public Army(List<HQ> hq, List<Elite> elite, List<Troop> troop, List<Flyer> fast, List<Heavy> heavy, List<Flyer> flyer)
+    // Name must be provided
+    public Army(string name)
     {
+      Name = name;
+    }
+
+    public Army(string name, List<HQ> hq, List<Elite> elite, List<Troop> troop, List<Flyer> fast, List<Heavy> heavy, List<Flyer> flyer)
+    {
+      _name = name;
       _hq = hq;
       _elite = elite;
       _troop = troop;
@@ -24,6 +32,7 @@ namespace mathhammer.models
       _flyer = flyer;
     }
 
+    public string Name { get => _name; set => _name = value; }
     public List<HQ> Hq { get => _hq; set => _hq = value; }
     public List<Elite> Elite { get => _elite; set => _elite = value; }
     public List<Troop> Troop { get => _troop; set => _troop = value; }

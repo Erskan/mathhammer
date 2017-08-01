@@ -16,6 +16,9 @@ namespace mathhammer.models
     private int _strength;
     private int _toughness;
     private int _wounds;
+    private int _maxmodels;
+    private int _minmodels;
+    private int _numofmodels;
     private List<Rule> _rules;
 
     #region Constructors
@@ -25,7 +28,7 @@ namespace mathhammer.models
 
     }
 
-    public Unit(string name, int points, int move, int ws, int bs, int attacks, int strength, int toughness, int wounds, List<Rule> rules)
+    public Unit(string name, int points, int move, int ws, int bs, int attacks, int strength, int toughness, int wounds, int maxmodels, int minmodels, int numofmodels, List<Rule> rules)
     {
       Name = name;
       Points = points;
@@ -36,6 +39,9 @@ namespace mathhammer.models
       Strength = strength;
       Toughness = toughness;
       Wounds = wounds;
+      Maxmodels = maxmodels;
+      Minmodels = minmodels;
+      Numofmodels = numofmodels;
       Rules = rules;
     }
     #endregion
@@ -50,5 +56,8 @@ namespace mathhammer.models
     public int Toughness { get => _toughness; set => _toughness = value; }
     public int Wounds { get => _wounds; set => _wounds = value; }
     public List<Rule> Rules { get => _rules; set => _rules = value; }
+    public int Maxmodels { get => _maxmodels; set => _maxmodels = value; }
+    public int Minmodels { get => _minmodels; set => _minmodels = value; }
+    public int Numofmodels { get => _numofmodels; set => _numofmodels = value; }
   }
 }
