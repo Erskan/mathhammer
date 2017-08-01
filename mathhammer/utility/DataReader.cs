@@ -13,8 +13,15 @@ namespace mathhammer.utility
     public static Army ReadData(string path)
     {
       JObject parsedArmy = JObject.Parse(File.ReadAllText(path));
-      Army newArmy = new Army(parsedArmy.GetValue("name").ToString());
-      return newArmy;
+      return new Army(parsedArmy.GetValue("name").ToString())
+      {
+        Hq = parsedArmy.GetValue("hq").ToObject<List<HQ>>(),
+        Elite = parsedArmy.GetValue("elite").ToObject<List<Elite>>(),
+        Troop = parsedArmy.GetValue("troop").ToObject<List<Troop>>(),
+        Fast = parsedArmy.GetValue("fast").ToObject<List<Fast>>(),
+        Heavy = parsedArmy.GetValue("heavy").ToObject<List<Heavy>>(),
+        Flyer = parsedArmy.GetValue("flyer").ToObject<List<Flyer>>()
+      };
     }
   }
 }
